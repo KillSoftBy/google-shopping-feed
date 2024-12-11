@@ -242,7 +242,7 @@ class Feed
         $cache->setCacheDirectory($this->cacheDir);
         $data = $cache->getOrCreate('google-feed-taxonomy.'.$languageISO639.'.txt', array('max-age' => '86400'),
             function () use ($languageCulture) {
-                return file_get_contents("http://www.google.com/basepages/producttype/taxonomy." . $languageCulture . ".txt");
+                return file_get_contents("http://www.google.com/basepages/producttype/taxonomy-with-ids." . $languageCulture . ".txt");
             }
         );
 

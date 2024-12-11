@@ -176,7 +176,7 @@ class Item
      * @param $description
      * @param string $encoding
      */
-    public function description($description, string $encoding = '')
+    public function description($description, string $encoding = null)
     {
         if (empty($encoding)) {
             $encoding = mb_internal_encoding();
